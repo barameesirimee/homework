@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'workshop';
+  movieid : number = 0 ;
+  shm:any = Array;
+
+constructor(private service :DataService){ 
+
+}
+ onBackClicked(movie: string): void{
+    this.shm = movie;
+}
 }
